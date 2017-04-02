@@ -29,7 +29,7 @@ edged = cv.Canny(gray, 10, 30, _res, 3, True)
 
 display_img(edged)
 (_,cnts, _) = cv.findContours(edged.copy(), mode = cv.RETR_LIST,  method = cv.CHAIN_APPROX_TC89_L1)
-cnts = sorted(cnts, key = cv.contourArea, reverse = True)[:10]
+#cnts = sorted(cnts, key = cv.contourArea, reverse = True)[:10]
 
 cv.drawContours(chain_tiles_1,cnts,-1,(0,255,0),3)
 display_img(chain_tiles_1)
